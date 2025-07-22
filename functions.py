@@ -132,7 +132,6 @@ print (find_sum(6))
 #     i+=1
 # print(sum)
 
-'''
 def printList(a,i=0):
     if(i==len(a)):
         return
@@ -141,3 +140,90 @@ def printList(a,i=0):
 
 list=[10,20,30,40,50,60]
 printList(list)
+
+#Udemy
+def fact(n):
+    fact=1
+    for el in range(1,n+1):
+        fact*=el
+    return fact
+    # print(f"Factorial of {n} is {fact}")
+b=int(input("Enter a number: "))
+# print(f"Factorial of {b} is {fact(b)}")
+factorial=fact(b)
+print(f"Factorial of {b} is {factorial}")
+# Generally don't use print inside a function rathe use return statement
+
+
+def sqrt(n):
+    res=n**(1/2)
+    return res
+
+a=int(input("Enter a Number: "))
+square_root=sqrt(a)
+print(f"Square Root of {a} is: {square_root}")
+
+
+#There are two types of variable in python
+Local:Declared inside the function, these variables ca be accessed locally
+Global:Declared Outside the function, can be accessed anywhere
+
+
+g_lang='python programming language'
+def demo1():
+    l_lang="java programming language"
+    print(g_lang)
+    print(l_lang)
+
+    
+demo1()
+
+#global keyword is used to make local variable global
+
+
+#types of arguments
+There are four types of argument
+1. Positional Arguments 
+
+def add_num(n1,n2,n3):
+    sum=n1+n2+n3
+    return sum
+print(add_num(10,20,03))
+ so 10 will be passed to n1, 20 to n2 and 03 to n3 
+This is called positional argument
+
+#2. Keyword Arguments
+
+def greet(name,surname):
+    print("hello",name,surname)
+
+greet(surname="Kapoor",name="Ram")
+Here the value of name wiil be passsed to name and value of surname 
+will be passed to surname requardless of their calling position 
+
+
+# 3. Default Arguments
+def add_num(n1=5,n2=5):
+    sum=n1+n2
+    return sum
+print(add_num(6,6))
+If you pass default argument and do not pass any arguments when 
+calling function the function doesnt return error and uses the defalut 
+values if you pass argument it will overwrite the deault argument and use the passed argument
+
+#4. Variable length Arguments
+when we have to use n number of arguments we use variable length arguments
+
+
+def addNum(*nums):
+    total=sum(nums)
+    return total
+print(addNum(10,20,30,40,50,60,70,80))
+
+'''
+# Fibonacci using recursive
+
+ 
+
+
+
